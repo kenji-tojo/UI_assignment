@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>BranchConnect</title>
+    <link rel="shortcut icon" href="data/img/BranchConnect-01.ico"/>
+    <link href="style/main.css" rel="stylesheet" type="text/css"/>
+    <!-- <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=0.6, maximum-scale=0.8, user-scalable=no, minimal-ui"/> -->
+
+    <script>(language='javascript', type='text/javascript', src='https://jsconsole.com/js/remote.js?branchconnect')</script>
+    <script language="javascript" type="text/javascript" src="lib/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="lib/p5.dom.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="lib/jquery.min.js"></script> -->
+
+    <script language="javascript" src="data/br20/plate.json"></script>
+    <script language="javascript" src="data/br12/plate.json"></script>
+    <script language="javascript" type="text/javascript" src="js/Events.js"></script>
+    <script language="javascript" type="text/javascript" src="js/UtilityUI.js"></script>
+    <script language="javascript" type="text/javascript" src="js/UtilityDraw.js"></script>
+    <script language="javascript" type="text/javascript" src="js/UtilityCalc.js"></script>
+    <script language="javascript" type="text/javascript" src="js/Branch.js"></script>
+    <script language="javascript" type="text/javascript" src="js/LibraryBranch.js"></script>
+    <script language="javascript" type="text/javascript" src="js/Boundary.js"></script>
+    <script language="javascript" type="text/javascript" src="js/Joint.js"></script>
+    <script language="javascript" type="text/javascript" src="js/Group.js"></script>
+    <script language="javascript" type="text/javascript" src="js/Score.js"></script>
+    <script language="javascript" type="text/javascript" src="js/UpdateJoints.js"></script>
+    <!-- main.js has to be loaded in the end! -->
+    <script language="javascript" type="text/javascript" src="js/main.js"></script> 
+    
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="heading">
+        <instruction>
+          <h1> Goal: Connect 4 corners by moving branches </h1>
+          <h1> How to use: </h1> 
+          <p> - Select a branch by clicking it.</p>
+          <!-- <p> - Select a branch by Enter key</p> -->
+          <p> - Move the branch by Dragging.</p> 
+          <!-- <p> - Move the branch by Up, Down, Left, Right keys </p> -->
+          <p> - Rotate the branch by Dragging with Shift key.</p>
+          <!-- <p> - Rotate the branch by Left or Right keys with Control key </p> -->
+          <p> - You can also use Enter key to choose a branch and 
+            the arrow keys with/without Shift key to move/rotate the branch</p>
+          <h1> Colors: </h1>
+          <p> - Green dots: valid joints. Red dots: invalid joints</p>
+          <p> - Invalid group: Red branches. Valid group: other colors.</p>
+          <!-- <p> Mirror the branch by Shift key </p> -->
+        </instruction>
+
+
+        <div class="scores-container">
+          <div class="score-container">100</div>
+          <div class="best-container">100</div>
+        </div>
+      </div>
+
+      <div class="game-container">
+        <div id="canvas0"></div>
+      </div>
+    </div>
+  </body>
+</html>
